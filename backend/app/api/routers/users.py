@@ -1,5 +1,5 @@
-from fastapi import APIRouter, HTTPException, Depends, status
-from fastapi.security import OAuth2PasswordRequestForm
+from fastapi import APIRouter, HTTPException, Depends, status # type: ignore
+from fastapi.security import OAuth2PasswordRequestForm # type: ignore
 from typing import List
 from datetime import timedelta
 

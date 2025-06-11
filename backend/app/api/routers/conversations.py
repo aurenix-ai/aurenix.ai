@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Depends, status, BackgroundTasks
+from fastapi import APIRouter, HTTPException, Depends, status, BackgroundTasks # type: ignore
 from typing import List
 from app.models.conversation import Conversation
 from app.models.user import User

@@ -8,7 +8,7 @@ Test script to validate backend setup by checking:
 import asyncio
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
-from redis import Redis
+from redis import Redis # type: ignore
 import httpx
 from dotenv import load_dotenv
 
