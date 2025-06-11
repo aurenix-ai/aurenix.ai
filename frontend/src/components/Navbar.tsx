@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Logo href="/" className="w=11 h-11" />
+            <Logo href="/" className="w-10 h-10 md:w-11 md:h-11" />
             <span className="text-lg font-mono tracking-tight text-white select-none hidden sm:inline font-orbitron relative top-[6px]">
               urenix.ai
             </span>
