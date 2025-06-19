@@ -5,6 +5,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+cd aurenix.ai/frontend
+# If you haven't installed dependencies yet, run:
+npm install
+#start the development server
 npm run dev
 # or
 yarn dev
