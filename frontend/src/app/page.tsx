@@ -61,119 +61,258 @@ export default function Home() {
       </section>
 
       {/* Aurenix.ai Personal Navigator Section */}
-      <section className="min-h-screen bg-primary text-white">
-  <div className="max-w-6xl mx-auto px-6">
-    {/* Top Heading */}
-    <div className="grid md:grid-cols-2 gap-8 mb-16">
-      <div>
-        <p className="text-sm font-medium text-gray-300 mb-2">
-          Personal for every user. Powerful across your team.
-        </p>
-        <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-white">
-          Not Another Tool.
-          <br />
-          A Smarter Way to Work.
-        </h2>
-      </div>
-      <div>
-        <p className="text-gray-200 text-lg">
-          Aurenix is your personal navigator for the entire AI universe.
-          It learns how you think, work, and grow – then guides you clearly, calmly, and confidently through the noise.
-        </p>
-        <p className="text-gray-200 text-lg mt-4">
-          Goodbye chaos. Hello clarity, confidence, and real results.
-        </p>
-      </div>
-    </div>
-
-    {/* Feature Cards */}
-    <div className="grid md:grid-cols-3 gap-12">
-      {[
-        {
-          icon: "/icons/fingerprint.svg",
-          title: "You set it up once",
-          desc: "In 5 minutes, Aurenix learns your style, role, and goals – so it can support you like it’s worked with you for years.",
-        },
-        {
-          icon: "/icons/guide.svg",
-          title: "You're guided daily",
-          desc: "Your AI will be completely tuned to your needs. You’ll get the right prompts, tools, suggestions and support – inside your real tasks as you work.",
-        },
-        {
-          icon: "/icons/target.svg",
-          title: "See your mastery grow",
-          desc: "Track progress with visual metrics and skill development paths.",
-        },
-      ].map((feature, i) => (
-        <div key={i} className="text-left group transition-all hover:scale-105">
-          <div className="w-12 h-12 mb-4 invert brightness-0 saturate-0">
-            <img src={feature.icon} alt={feature.title} className="w-full h-full" />
+      <section className="py-24 bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Top Heading */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div>
+              <p className="text-sm font-medium text-gray-300 mb-2">
+                Personal for every user. Powerful across your team.
+              </p>
+              <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-white">
+                Not Another Tool.
+                <br />
+                A Smarter Way to Work.
+              </h2>
+            </div>
+            <div>
+              <p className="text-gray-200 text-lg">
+                Aurenix is your personal navigator for the entire AI universe.
+                It learns how you think, work, and grow – then guides you clearly, calmly, and confidently through the noise.
+              </p>
+              <p className="text-gray-200 text-lg mt-4">
+                Goodbye chaos. Hello clarity, confidence, and real results.
+              </p>
+            </div>
           </div>
-          <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-200">
-            {feature.title}
-          </h3>
-          <p className="text-gray-300 mt-2">{feature.desc}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
 
-      {/* Features Section */}
-      <section className="relative py-20 bg-primary-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Aurenix AI?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI-powered platform can transform your workflow
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-12">
             {[
               {
-                title: "Smart Automation",
-                description: "Automate repetitive tasks and focus on what matters most",
-                icon: "🚀",
+                icon: "/icons/fingerprint.svg",
+                title: "You set it up once",
+                desc: "In 5 minutes, Aurenix learns your style, role, and goals – so it can support you like it's worked with you for years.",
               },
               {
-                title: "Personalized Learning",
-                description: "AI that adapts to your unique working style",
-                icon: "🧠",
+                icon: "/icons/guide.svg",
+                title: "You're guided daily",
+                desc: "Your AI will be completely tuned to your needs. You'll get the right prompts, tools, suggestions and support – inside your real tasks as you work.",
               },
               {
-                title: "Seamless Integration",
-                description: "Works with your favorite tools and platforms",
-                icon: "🔄",
+                icon: "/icons/target.svg",
+                title: "See your mastery grow",
+                desc: "Track progress with visual metrics and skill development paths.",
               },
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-primary-700/50 backdrop-blur-lg rounded-2xl p-8 hover:bg-primary-600/50 transition-colors"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+            ].map((feature, i) => (
+              <div key={i} className="text-left group transition-all hover:scale-105">
+                <div className="w-12 h-12 mb-4 invert brightness-0 saturate-0">
+                  <img src={feature.icon} alt={feature.title} className="w-full h-full" />
+                </div>
+                <h3 className="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-200">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mt-2">{feature.desc}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-24 bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-semibold text-white mb-4">Why Aurenix?</h2>
+          <p className="text-white text-lg">
+            It learns your style. Matches you to the right tools. <br />
+            And finally makes AI part of your actual work. <br />
+            You don't need more tools. You need a sidekick that guides you through the AI fog to real results.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-16">
+            {/* Card 1 */}
+            <div className="relative rounded overflow-hidden shadow-md">
+              <img
+                src="/images/team-setup.jpg"
+                alt="Set up support"
+                className="w-full h-110 object-cover grayscale"
+              />
+              <div className="absolute bottom-0 left-0 p-4 text-left text-white bg-gradient-to-t from-black/70 to-transparent w-full">
+                <p className="text-sm font-medium opacity-80">Less than few minutes</p>
+                <h3 className="text-xl font-semibold">Set up once, get ongoing support</h3>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="relative rounded overflow-hidden shadow-md">
+              <img
+                src="/images/master-ai.jpg"
+                alt="Master AI"
+                className="w-full h-110 object-cover grayscale"
+              />
+              <div className="absolute bottom-0 left-0 p-4 text-left text-white bg-gradient-to-t from-black/70 to-transparent w-full">
+                <p className="text-sm font-medium opacity-80">Master AI</p>
+                <h3 className="text-xl font-semibold">The fastest way to master AI</h3>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="relative rounded overflow-hidden shadow-md">
+              <img
+                src="/images/ai-clarity.jpg"
+                alt="AI Clarity"
+                className="w-full h-110 object-cover grayscale"
+              />
+              <div className="absolute bottom-0 left-0 p-4 text-left text-white bg-gradient-to-t from-black/70 to-transparent w-full">
+                <p className="text-sm font-medium opacity-80">Designed around you</p>
+                <h3 className="text-xl font-semibold">From AI confusion to AI clarity</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Everything You Need Section */}
+      <section className="py-24 bg-primary text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-sm text-gray-400 mb-4">Your AI Navigator</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            Everything you need to make AI part of how you actually work.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            {/* Left Features */}
+            <div className="space-y-10">
+              {[
+                {
+                  icon: "/icons/hub.png",
+                  title: "Central Tool Hub",
+                  desc: "All your tools. One hub. Zero chaos.",
+                },
+                {
+                  icon: "/icons/book.png",
+                  title: "A Growing Library of Prompts, Templates & Tips",
+                  desc: "Practical resources to plug into your real work, fast.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-6 h-6 mt-1 filter invert brightness-200"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="text-gray-300 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Center Image */}
+            <div className="flex justify-center">
+              <img
+                src="/images/fingerprint-center.png"
+                alt="Fingerprint Animation"
+                className="w-[320px] rounded-xl shadow-lg"
+              />
+            </div>
+
+            {/* Right Features */}
+            <div className="space-y-10">
+              {[
+                {
+                  icon: "/icons/track.png",
+                  title: "Learning Tracks",
+                  desc: "Step-by-step pathways to build specific AI skills that matter to you.",
+                },
+                {
+                  icon: "/icons/community.svg",
+                  title: "Community Connection",
+                  desc: "Share ideas, swap tips, and grow with others learning to use AI like you.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-6 h-6 mt-1 filter invert brightness-200"
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="text-gray-300 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Before/After Section */}
+      <section className="py-24 bg-primary text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-center text-sm font-medium text-gray-400 mb-4">BEFORE / AFTER</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+            Work, life and play with <span className="text-accent">Aurenix</span> is just easier
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Before Aurenix Card */}
+            <div className="bg-white/5 border border-white/10 backdrop-blur-lg rounded-2xl p-8">
+              <div className="flex items-center mb-4">
+                <div className="w-6 h-6 rounded-full border border-gray-400 mr-3"></div>
+                <div>
+                  <h3 className="text-white font-semibold">Before Aurenix</h3>
+                  <p className="text-sm text-gray-400">The Struggle</p>
+                </div>
+              </div>
+              <ul className="mt-6 space-y-4 text-gray-300">
+                {[
+                  "Generic, forgettable outputs",
+                  "Tools everywhere",
+                  "Wasted time on trial and error",
+                  "Prompt chaos",
+                  "Time lost, confidence shaken",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-red-500 text-xl mt-1">✖</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* After Aurenix Card */}
+            <div className="bg-accent rounded-2xl p-8 text-white shadow-lg">
+              <div className="flex items-center mb-4">
+                <img src="/logo_big.png" alt="Aurenix Logo" className="w-10 h-10 mr-3" />
+                <div>
+                  <h3 className="text-white font-semibold">After Aurenix</h3>
+                  <p className="text-sm text-white/80">The Solution</p>
+                </div>
+              </div>
+              <ul className="mt-6 space-y-4">
+                {[
+                  "One smart hub to rule them all",
+                  "The right tools at the right time",
+                  "Personalised, evolving support",
+                  "High-impact prompts, done for you",
+                  "Confidence regained, value delivered",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-white text-xl mt-1">✔</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="relative py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -202,161 +341,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      
-      <section className="bg-primary min-h-screen text-white py-24">
-  <div className="max-w-7xl mx-auto px-6">
-    <p className="text-center text-sm text-gray-400 mb-4">Your AI Navigator</p>
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-      Everything you need to make AI part of how you actually work.
-    </h2>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-      {/* Left Features */}
-      <div className="space-y-10">
-        {[
-          {
-            icon: "/icons/hub.png",
-            title: "Central Tool Hub",
-            desc: "All your tools. One hub. Zero chaos.",
-          },
-          {
-            icon: "/icons/book.png",
-            title: "A Growing Library of Prompts, Templates & Tips",
-            desc: "Practical resources to plug into your real work, fast.",
-          },
-        ].map((item, i) => (
-          <div key={i} className="flex items-start gap-4">
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="w-6 h-6 mt-1 filter invert brightness-200"
-            />
-            <div>
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="text-gray-300 text-sm">{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Center Image */}
-      <div className="flex justify-center">
-        <img
-          src="/images/fingerprint-center.png"
-          alt="Fingerprint Animation"
-          className="w-[320px] rounded-xl shadow-lg"
-        />
-      </div>
-
-      {/* Right Features */}
-      <div className="space-y-10">
-        {[
-          {
-            icon: "/icons/track.png",
-            title: "Learning Tracks",
-            desc: "Step-by-step pathways to build specific AI skills that matter to you.",
-          },
-          {
-            icon: "/icons/community.svg",
-            title: "Community Connection",
-            desc: "Share ideas, swap tips, and grow with others learning to use AI like you.",
-          },
-        ].map((item, i) => (
-          <div key={i} className="flex items-start gap-4">
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="w-6 h-6 mt-1 filter invert brightness-200"
-            />
-            <div>
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="text-gray-300 text-sm">{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-      <section className="bg-primary min-h-screen text-white py-24">
-  <div className="max-w-6xl mx-auto px-6">
-    <p className="text-center text-sm font-medium text-gray-400 mb-4">BEFORE / AFTER</p>
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-      Work, life and play with <span className="text-accent">Aurenix</span> is just easier
-    </h2>
-
-    <div className="grid md:grid-cols-2 gap-8">
-      {/* Before Aurenix Card */}
-      <div className="bg-white/5 border border-white/10 backdrop-blur-lg rounded-2xl p-8">
-        <div className="flex items-center mb-4">
-          <div className="w-6 h-6 rounded-full border border-gray-400 mr-3"></div>
-          <div>
-            <h3 className="text-white font-semibold">Before Aurenix</h3>
-            <p className="text-sm text-gray-400">The Struggle</p>
-          </div>
-        </div>
-        <ul className="mt-6 space-y-4 text-gray-300">
-          {[
-            "Generic, forgettable outputs",
-            "Tools everywhere",
-            "Wasted time on trial and error",
-            "Prompt chaos",
-            "Time lost, confidence shaken",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span className="text-red-500 text-xl mt-1">✖</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* After Aurenix Card */}
-      <div className="bg-accent rounded-2xl p-8 text-white shadow-lg">
-        <div className="flex items-center mb-4">
-          <img src="/logo_big.png" alt="Aurenix Logo" className="w-10 h-10 mr-3" />
-          <div>
-            <h3 className="text-white font-semibold">After Aurenix</h3>
-            <p className="text-sm text-white/80">The Solution</p>
-          </div>
-        </div>
-        <ul className="mt-6 space-y-4">
-          {[
-            "One smart hub to rule them all",
-            "The right tools at the right time",
-            "Personalised, evolving support",
-            "High-impact prompts, done for you",
-            "Confidence regained, value delivered",
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span className="text-white text-xl mt-1">✔</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-      
-
-      
-
 
       {/* Footer */}
       <footer className="bg-primary-900 py-12">
