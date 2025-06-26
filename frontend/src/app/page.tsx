@@ -203,6 +203,7 @@ export default function Home() {
         </div>
       </section>
 
+      
       <section className="bg-primary min-h-screen text-white py-24">
   <div className="max-w-7xl mx-auto px-6">
     <p className="text-center text-sm text-gray-400 mb-4">Your AI Navigator</p>
@@ -215,18 +216,22 @@ export default function Home() {
       <div className="space-y-10">
         {[
           {
-            icon: "/icons/hub.svg",
+            icon: "/icons/hub.png",
             title: "Central Tool Hub",
             desc: "All your tools. One hub. Zero chaos.",
           },
           {
-            icon: "/icons/book.svg",
+            icon: "/icons/book.png",
             title: "A Growing Library of Prompts, Templates & Tips",
             desc: "Practical resources to plug into your real work, fast.",
           },
         ].map((item, i) => (
           <div key={i} className="flex items-start gap-4">
-            <img src={item.icon} alt={item.title} className="w-6 h-6 mt-1" />
+            <img
+              src={item.icon}
+              alt={item.title}
+              className="w-6 h-6 mt-1 filter invert brightness-200"
+            />
             <div>
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-gray-300 text-sm">{item.desc}</p>
@@ -240,7 +245,7 @@ export default function Home() {
         <img
           src="/images/fingerprint-center.png"
           alt="Fingerprint Animation"
-          className="w-[280px] rounded-xl shadow-lg"
+          className="w-[320px] rounded-xl shadow-lg"
         />
       </div>
 
@@ -248,7 +253,7 @@ export default function Home() {
       <div className="space-y-10">
         {[
           {
-            icon: "/icons/track.svg",
+            icon: "/icons/track.png",
             title: "Learning Tracks",
             desc: "Step-by-step pathways to build specific AI skills that matter to you.",
           },
@@ -259,7 +264,11 @@ export default function Home() {
           },
         ].map((item, i) => (
           <div key={i} className="flex items-start gap-4">
-            <img src={item.icon} alt={item.title} className="w-6 h-6 mt-1" />
+            <img
+              src={item.icon}
+              alt={item.title}
+              className="w-6 h-6 mt-1 filter invert brightness-200"
+            />
             <div>
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-gray-300 text-sm">{item.desc}</p>
@@ -270,6 +279,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 
 
 
