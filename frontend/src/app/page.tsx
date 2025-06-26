@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-primary text-white">
+      <section id="why-auernix" className="py-24 bg-primary text-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-semibold text-white mb-4">Why Aurenix?</h2>
           <p className="text-white text-lg">
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Everything You Need Section */}
-      <section className="py-24 bg-primary text-white">
+      <section id="ai-navigator" className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-center text-sm text-gray-400 mb-4">Your AI Navigator</p>
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -355,8 +355,8 @@ export default function Home() {
             <div>
               <h3 className="text-white font-semibold mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><Link href="/features" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
-                <li><Link href="/solutions" className="text-gray-400 hover:text-white transition-colors">Solutions</Link></li>
+                <li><Link href="#why-auernix" className="text-gray-400 hover:text-white transition-colors">Features</Link></li>
+                <li><Link href="/#ai-navigator" className="text-gray-400 hover:text-white transition-colors">Solutions</Link></li>
                 <li><Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
               </ul>
             </div>

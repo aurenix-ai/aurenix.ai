@@ -19,8 +19,8 @@ const Navbar = () => {
   }, [scrollY])
 
   const menuItems = [
-    { name: 'Features', href: '/features' },
-    { name: 'Solutions', href: '/solutions' },
+    { name: 'Features', href: '/#why-auernix' },
+    { name: 'Solutions', href: '/#ai-navigator' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
   ]
