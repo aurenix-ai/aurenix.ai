@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
+import { SignIn, SignInButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary-900 to-primary" />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,15 +27,15 @@ export default function Home() {
               <br />
               <span className="gradient-text">Enhanced Productivity</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of work with Aurenix AI. Boost your productivity and creativity with our cutting-edge AI assistant.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button href="/get-started" size="lg">
-                Get Started Free
-              </Button>
+              <SignInButton
+            ><Button className="bg-red-900">Get Started</Button>
+              </SignInButton>
               <Button href="/demo" variant="outline" size="lg">
                 Watch Demo
               </Button>
@@ -328,14 +329,9 @@ export default function Home() {
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
                 Join thousands of professionals who are already using Aurenix AI to enhance their productivity.
               </p>
-              <Button
-                href="/get-started"
-                variant="outline"
-                size="lg"
-                className="bg-white hover:bg-white/90 !text-accent border-transparent"
-              >
-                Start Your Free Trial
-              </Button>
+              <SignInButton>
+                <Button className="bg-white hover:bg-white/90 !text-accent border-transparent">Start Your Free Trial</Button>
+              </SignInButton>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-accent-400 opacity-50" />
           </motion.div>
