@@ -5,9 +5,20 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
-import { SignIn, SignInButton } from "@clerk/nextjs";
+import { SignIn, SignInButton, useAuth } from "@clerk/nextjs";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const { isSignedIn, isLoaded } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isLoaded && isSignedIn) {
+      router.replace("/after-login");
+    }
+  }, [isLoaded, isSignedIn, router]);
+
   return (
     <div className="min-h-screen bg-primary">
       {/* Hero Section */}
