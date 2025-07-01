@@ -1,45 +1,61 @@
-from fastapi import FastAPI, Depends
+"""
+FastAPI application configuration and core setup.
+"""
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
+from contextlib import asynccontextmanager
 
 from app.core.config import settings
-from app.core.database import Database
-from app.api.routers import users, conversations
+from app.api.routes import auth, users
+from app.database.database import engine
+from app.models import models
+
+# Create database tables
+models.Base.metadata.create_all(bind=engine)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Application lifespan events."""
+    # Startup
+    print(f"Starting {settings.APP_NAME} v{settings.APP_VERSION}")
+    yield
+    # Shutdown
+    print("Shutting down...")
 
 app = FastAPI(
-    title=settings.PROJECT_NAME,
-    description="Your AI Sidekick - Personalized AI Assistant Platform",
-    version=settings.VERSION,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    title=settings.APP_NAME,
+    version=settings.APP_VERSION,
+    description="Aurenix AI - Your AI Sidekick for Enhanced Productivity",
+    lifespan=lifespan
 )
 
-# Configure CORS
+# Security middleware
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["*"])
+
+# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS,
+    allow_origins=settings.ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Database initialization
-@app.on_event("startup")
-async def startup_db_client():
-    db = Database()
-    await db.connect_to_database()
-
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    db = Database()
-    await db.close_database_connection()
-
-# Include routers
-app.include_router(users.router, prefix=settings.API_V1_STR)
-app.include_router(conversations.router, prefix=settings.API_V1_STR)
+# API Routes
+app.include_router(auth.router, prefix="/api/auth", tags=["authentication"])
+app.include_router(users.router, prefix="/api/users", tags=["users"])
 
 @app.get("/")
 async def root():
+    """Root endpoint."""
     return {
-        "message": "Welcome to Aurenix AI API",
-        "version": settings.VERSION,
-        "docs_url": "/docs"
+        "message": f"Welcome to {settings.APP_NAME}",
+        "version": settings.APP_VERSION,
+        "docs": "/docs"
     }
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint."""
+    return {"status": "healthy"}

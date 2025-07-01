@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from './Button';
 import { Logo } from './Logo';
-import { SignIn, SignInButton } from '@clerk/nextjs';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -42,10 +42,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {/* <Button size="lg" >
-              Get Started
-            </Button> */}
-            <SignInButton>Get Started</SignInButton>
+            <Link href="/sign-in">
+              <Button size="lg">Get Started</Button>
+            </Link>
             <Button size="lg" variant="outline" href="/learn-more">
               Learn More
             </Button>

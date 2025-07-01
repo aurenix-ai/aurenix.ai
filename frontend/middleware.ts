@@ -1,6 +1,14 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+// Authentication middleware for Next.js
+// Currently using client-side auth, but can be extended for server-side protection
 
-export default clerkMiddleware();
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  // For now, we'll handle auth on the client side with our AuthContext
+  // This middleware can be extended later for server-side route protection
+  return NextResponse.next();
+}
 
 export const config = {
   matcher: [
