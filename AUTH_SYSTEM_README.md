@@ -89,18 +89,18 @@ This implementation provides a secure, production-ready authentication system wi
 
 ### Authentication Routes
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/auth/signup` | Register a new user |
-| `POST` | `/api/auth/login` | Login user and get tokens |
-| `POST` | `/api/auth/refresh` | Refresh access token |
-| `POST` | `/api/auth/logout` | Logout and revoke tokens |
+| Method | Endpoint            | Description               |
+| ------ | ------------------- | ------------------------- |
+| `POST` | `/api/auth/signup`  | Register a new user       |
+| `POST` | `/api/auth/login`   | Login user and get tokens |
+| `POST` | `/api/auth/refresh` | Refresh access token      |
+| `POST` | `/api/auth/logout`  | Logout and revoke tokens  |
 
 ### User Routes
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/users/me` | Get current user info (protected) |
+| Method | Endpoint        | Description                       |
+| ------ | --------------- | --------------------------------- |
+| `GET`  | `/api/users/me` | Get current user info (protected) |
 
 ### Example Usage
 
