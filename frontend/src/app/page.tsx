@@ -5,19 +5,19 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
-import { SignIn, SignInButton, useAuth } from "@clerk/nextjs";
+import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const { isSignedIn, isLoaded } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (isLoaded && isSignedIn) {
+    if (!isLoading && isAuthenticated) {
       router.replace("/after-login");
     }
-  }, [isLoaded, isSignedIn, router]);
+  }, [isLoading, isAuthenticated, router]);
 
   return (
     <div className="min-h-screen bg-primary">
@@ -44,9 +44,9 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <SignInButton
-            ><Button className="bg-red-900">Get Started</Button>
-              </SignInButton>
+              <Link href="/sign-in">
+                <Button className="bg-red-900">Get Started</Button>
+              </Link>
               <Button href="/demo" variant="outline" size="lg">
                 Watch Demo
               </Button>
@@ -340,9 +340,9 @@ export default function Home() {
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
                 Join thousands of professionals who are already using Aurenix AI to enhance their productivity.
               </p>
-              <SignInButton>
+              <Link href="/sign-in">
                 <Button className="bg-white hover:bg-white/90 !text-accent border-transparent">Start Your Free Trial</Button>
-              </SignInButton>
+              </Link>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-accent-400 opacity-50" />
           </motion.div>
