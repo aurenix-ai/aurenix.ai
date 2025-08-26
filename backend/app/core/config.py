@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     DEBUG: bool = False
     
     # CORS
-    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000"]
+    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:3002"]
     
     class Config:
         env_file = ".env"
