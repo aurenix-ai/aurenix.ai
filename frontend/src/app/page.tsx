@@ -340,7 +340,7 @@ export default function Home() {
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
                 Join thousands of professionals who are already using Aurenix AI to enhance their productivity.
               </p>
-              <Link href="/sign-in">
+              <Link href="/coming-soon">
                 <Button className="bg-white hover:bg-white/90 !text-accent border-transparent">Start Your Free Trial</Button>
               </Link>
             </div>
