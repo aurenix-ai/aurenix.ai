@@ -10,7 +10,9 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Logo size="sm" />
+            {/* <Logo size="sm" /> */}
+            <img src="/logo_big.png" alt="Aurenix Logo" className="w-120 h-26 mr-3" />
+
             <p className="mt-4 text-gray-400 max-w-md">
               Empowering users with next-generation AI technology for enhanced productivity and innovation.
             </p>
