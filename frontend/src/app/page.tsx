@@ -47,7 +47,7 @@ export default function Home() {
               <Link href="/coming-soon">
                 <Button className="bg-red-900">Get Started</Button>
               </Link>
-              <Button href="/demo" variant="outline" size="lg">
+              <Button href="/coming-soon" variant="outline" size="lg">
                 Watch Demo
               </Button>
             </div>
