@@ -1,6 +1,7 @@
 'use client';
 
-import { Logo } from './Logo';
+// import { Logo } from './Logo';
+import Image from 'next/image';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             {/* <Logo size="sm" /> */}
-            <img src="/logo_big.png" alt="Aurenix Logo" className="w-10 h-10 mr-3" />
-
+            {/* <img src="/logo_big.png" alt="Aurenix Logo" className="w-10 h-10 mr-3" /> */}
+            <Image
+              src="/logo_big.png"
+              alt="Aurenix AI Logo"
+              width={160}
+              height={35}
+              className="h-auto w-auto"
+            />
             <p className="mt-4 text-gray-400 max-w-md">
               Empowering users with next-generation AI technology for enhanced productivity and innovation.
             </p>
