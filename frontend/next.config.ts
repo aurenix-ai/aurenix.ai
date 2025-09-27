@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configure output mode
-  output: 'standalone',
-  // Configure images domain if needed
+  // Export static HTML for Netlify
+  output: 'export',
+
   images: {
     domains: [],
   },
