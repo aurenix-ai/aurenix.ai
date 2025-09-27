@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             {/* <Logo size="sm" /> */}
-            <img src="/logo_big.png" alt="Aurenix Logo" className="w-120 h-26 md:w-11 md:h-11" />
+            <img src="public/logo_big.png" alt="Aurenix Logo" className="w-10 h-10 mr-3" />
 
             <p className="mt-4 text-gray-400 max-w-md">
               Empowering users with next-generation AI technology for enhanced productivity and innovation.
