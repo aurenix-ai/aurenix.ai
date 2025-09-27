@@ -44,7 +44,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link href="/sign-in">
+              <Link href="/coming-soon">
                 <Button className="bg-red-900">Get Started</Button>
               </Link>
               <Button href="/demo" variant="outline" size="lg">
